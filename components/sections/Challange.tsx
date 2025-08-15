@@ -7,8 +7,8 @@ export const Challange = () => {
             The Hiring Challenge
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Today's hiring teams face overwhelming application volumes and
-            inefficient screening methods.
+            {`Today's hiring teams face overwhelming application volumes and
+            inefficient screening methods.`}
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -16,9 +16,7 @@ export const Challange = () => {
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
               <span className="text-xl font-bold text-primary">1</span>
             </div>
-            <h3 className="text-xl font-medium mb-2  text-destructive">
-              Application Overload
-            </h3>
+            <h3 className="text-xl font-medium mb-2">Application Overload</h3>
             <p className="text-muted-foreground">
               Hiring teams receive hundreds of applications for a single job
               posting, making it impossible to interview everyone.
@@ -28,7 +26,7 @@ export const Challange = () => {
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
               <span className="text-xl font-bold text-primary">2</span>
             </div>
-            <h3 className="text-xl font-medium mb-2 text-destructive">
+            <h3 className="text-xl font-medium mb-2">
               Keyword Filtering Fails
             </h3>
             <p className="text-muted-foreground">
@@ -40,9 +38,7 @@ export const Challange = () => {
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
               <span className="text-xl font-bold text-primary">3</span>
             </div>
-            <h3 className="text-xl font-medium mb-2 text-destructive">
-              Time-Intensive Process
-            </h3>
+            <h3 className="text-xl font-medium mb-2">Time-Intensive Process</h3>
             <p className="text-muted-foreground">
               {`First-round interviews consume valuable time that could be
                 better spent evaluating top candidates.`}

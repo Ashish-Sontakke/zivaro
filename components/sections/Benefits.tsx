@@ -42,15 +42,15 @@ export function Benefits() {
           <div className="bg-card p-6 rounded-lg shadow-sm border">
             <h3 className="text-xl font-medium mb-4">Candidate Experience</h3>
             <p className="text-muted-foreground">
-              Provide a modern, flexible interview experience that respects
-              candidates' time and schedules.
+              {`Provide a modern, flexible interview experience that respects
+              candidates' time and schedules.`}
             </p>
           </div>
           <div className="bg-card p-6 rounded-lg shadow-sm border">
             <h3 className="text-xl font-medium mb-4">Scalable Solution</h3>
             <p className="text-muted-foreground">
-              Handle any volume of applications without increasing your team's
-              workload or hiring costs.
+              {`  Handle any volume of applications without increasing your team's
+              workload or hiring costs.`}
             </p>
           </div>
         </div>

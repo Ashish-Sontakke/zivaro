@@ -58,8 +58,8 @@ export function CTA() {
   return (
     <section className="py-20" id="contact">
       <div className="container mx-auto">
-        <div className="max-w-4xl mx-auto bg-card p-8 md:p-12 rounded-lg">
-          <div className="text-center mb-8">
+        <div className="bg-card py-8 rounded-lg">
+          <div className="text-center lg:text-left mb-8">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
               Ready to Transform Your Hiring Process?
             </h2>
@@ -72,7 +72,7 @@ export function CTA() {
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="space-y-6 max-w-md mx-auto"
+              className="space-y-6 max-w-md mx-auto lg:mx-0"
             >
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <FormField

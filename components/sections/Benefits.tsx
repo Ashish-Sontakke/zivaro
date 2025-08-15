@@ -2,11 +2,11 @@ export function Benefits() {
   return (
     <section className="py-20" id="benefits">
       <div className="container">
-        <div className="flex flex-col gap-4 text-center mb-16">
+        <div className="flex flex-col gap-4 text-center lg:text-left mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
             Why Choose Zivaro.ai
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
             Our platform offers significant advantages for your hiring process.
           </p>
         </div>

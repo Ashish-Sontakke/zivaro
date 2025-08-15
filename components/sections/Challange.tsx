@@ -2,11 +2,11 @@ export const Challange = () => {
   return (
     <section className="py-20" id="problem">
       <div className="container">
-        <div className="flex flex-col gap-4 text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-destructive">
+        <div className="flex flex-col gap-4 text-center lg:text-left mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
             The Hiring Challenge
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
             {`Today's hiring teams face overwhelming application volumes and
             inefficient screening methods.`}
           </p>

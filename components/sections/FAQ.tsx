@@ -51,29 +51,23 @@ export function FAQ() {
   return (
     <section className="py-20" id="faq">
       <div className="container">
-        <div className="flex flex-col gap-4 text-center mb-16">
+        <div className="flex flex-col gap-4 text-center lg:text-left mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
             Find answers to common questions about our AI interview platform.
           </p>
         </div>
-        <div className="max-w-3xl mx-auto">
-          <Accordion
-            type="single"
-            collapsible
-            className="rounded-lg border p-2"
-          >
+        <div className=" ">
+          <Accordion type="single" collapsible className="rounded-lg p-2">
             {FAQ_ITEMS.map((item) => (
               <AccordionItem key={item.id} value={item.id}>
-                <AccordionTrigger className="px-4 text-base">
+                <AccordionTrigger className="px-4 text-base font-semibold">
                   {item.question}
                 </AccordionTrigger>
                 <AccordionContent className="px-4">
-                  <p className="text-muted-foreground text-base">
-                    {item.answer}
-                  </p>
+                  <p className="text-base">{item.answer}</p>
                 </AccordionContent>
               </AccordionItem>
             ))}

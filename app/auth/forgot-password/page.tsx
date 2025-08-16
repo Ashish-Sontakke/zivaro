@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -28,7 +27,6 @@ type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
 
 export default function ForgotPasswordPage() {
   const { resetPassword } = useAuth();
-  const router = useRouter();
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -48,8 +46,9 @@ export default function ForgotPasswordPage() {
     try {
       await resetPassword(data.email);
       setIsSuccess(true);
-    } catch (err: any) {
-      setError(err.message || "Failed to send reset instructions");
+    } catch (err: unknown) {
+      const error = err as Error;
+      setError(error.message || "Failed to send reset instructions");
     } finally {
       setIsLoading(false);
     }
@@ -62,11 +61,13 @@ export default function ForgotPasswordPage() {
     >
       {isSuccess ? (
         <div className="text-center space-y-4">
-            <p>Password reset instructions have been sent to your email.</p>
-            <p>Please check your inbox and follow the link to reset your password.</p>
-            <Button asChild className="w-full">
-                <Link href="/auth/reset-password">Proceed to Reset</Link>
-            </Button>
+          <p>Password reset instructions have been sent to your email.</p>
+          <p>
+            Please check your inbox and follow the link to reset your password.
+          </p>
+          <Button asChild className="w-full">
+            <Link href="/auth/reset-password">Proceed to Reset</Link>
+          </Button>
         </div>
       ) : (
         <Form {...form}>

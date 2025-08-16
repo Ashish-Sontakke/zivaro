@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -52,8 +51,9 @@ export default function ResetPasswordPage() {
     try {
       await confirmResetPassword(data.email, data.code, data.newPassword);
       router.push("/auth");
-    } catch (err: any) {
-      setError(err.message || "Failed to reset password");
+    } catch (err: unknown) {
+      const error = err as Error;
+      setError(error.message || "Failed to reset password");
     } finally {
       setIsLoading(false);
     }

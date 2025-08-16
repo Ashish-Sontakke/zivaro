@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope as Font } from "next/font/google";
 import "./globals.css";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Zivaro.ai | Realtime LLM Powered Multimodal AI Interviewer",
@@ -21,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className} antialiased`}>{children}</body>
+      <Suspense>
+        <body className={`${font.className} antialiased`}>{children}</body>
+      </Suspense>
     </html>
   );
 }

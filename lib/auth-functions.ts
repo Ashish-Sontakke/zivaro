@@ -2,7 +2,7 @@ import { fetchAuthSession, signUp } from "aws-amplify/auth";
 import { confirmSignUp } from "aws-amplify/auth";
 import { signIn } from "aws-amplify/auth";
 import { signOut } from "aws-amplify/auth";
-import { getCurrentUser, fetchUserAttributes } from "aws-amplify/auth";
+import { getCurrentUser } from "aws-amplify/auth";
 import { resetPassword, confirmResetPassword } from "aws-amplify/auth";
 
 export const customSignUp = async ({

@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import Image from "next/image";
-import heroImage from "@/public/hero.png";
+import { Flowchart } from "@/components/flowchart";
 
 export const Hero = () => {
   return (
@@ -18,7 +17,7 @@ export const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-2 lg:justify-start justify-center">
               <Link
-                href="#contact"
+                href="/app"
                 className={cn(
                   "inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 py-3 text-base font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                 )}
@@ -26,7 +25,7 @@ export const Hero = () => {
                 Get Started
               </Link>
               <Link
-                href="#how-it-works"
+                href="/contact"
                 className={cn(
                   "inline-flex h-11 items-center justify-center rounded-md border border-input bg-background px-8 py-3 text-base font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                 )}
@@ -35,14 +34,8 @@ export const Hero = () => {
               </Link>
             </div>
           </div>
-          <div className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden">
-            <Image
-              src={heroImage}
-              alt="AI-powered interview platform"
-              fill
-              priority
-              className="object-contain rounded-lg"
-            />
+          <div className="relative flex items-center justify-center p-6">
+            <Flowchart />
           </div>
         </div>
       </div>

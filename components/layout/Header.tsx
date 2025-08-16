@@ -11,10 +11,10 @@ export function Header() {
           </Link>
           <nav className="hidden md:flex gap-6">
             <Link
-              href="#how-it-works"
+              href="/contact"
               className="text-sm font-medium transition-colors hover:text-primary"
             >
-              How It Works
+              Contact
             </Link>
             <Link
               href="#benefits"
@@ -32,7 +32,7 @@ export function Header() {
         </div>
         <div className="flex items-center gap-4">
           <Link
-            href="#contact"
+            href="/app"
             className={cn(
               "inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
             )}

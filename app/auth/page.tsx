@@ -30,7 +30,7 @@ const loginSchema = z.object({
 type LoginFormValues = z.infer<typeof loginSchema>;
 
 export default function LoginPage() {
-  const { signIn } = useAuth();
+  const { signIn, isAuthenticated } = useAuth();
   const router = useRouter();
   const searchParams = useSearchParams();
   const emailFromParams = searchParams.get("email") || "";
@@ -44,6 +44,12 @@ export default function LoginPage() {
       password: "",
     },
   });
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      router.push("/app");
+    }
+  }, [isAuthenticated, router]);
 
   // Update form value if email param changes
   useEffect(() => {

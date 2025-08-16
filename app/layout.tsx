@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope as Font } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Zivaro.ai | Realtime LLM Powered Multimodal AI Interviewer",

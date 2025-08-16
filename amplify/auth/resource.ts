@@ -6,7 +6,9 @@ import { postConfirmation } from "./post-confirmation/resource";
  */
 export const auth = defineAuth({
   loginWith: {
-    email: true,
+    email: {
+      verificationEmailSubject: "Verify your new account for Zivaro",
+    },
   },
   // Define user groups
   groups: ["admin", "candidate"],

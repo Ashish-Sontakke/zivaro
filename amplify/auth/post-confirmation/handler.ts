@@ -8,7 +8,6 @@ import {
 const ADMIN_EMAILS = [
   "admin@zivaro.ai",
   "support@zivaro.ai",
-  "",
   // Add more admin emails as needed
 ];
 

@@ -59,8 +59,8 @@ export function FAQ() {
             Find answers to common questions about our AI interview platform.
           </p>
         </div>
-        <div className=" ">
-          <Accordion type="single" collapsible className="rounded-lg p-2">
+        <div>
+          <Accordion type="single" collapsible className="rounded-lg py-2">
             {FAQ_ITEMS.map((item) => (
               <AccordionItem key={item.id} value={item.id}>
                 <AccordionTrigger className="px-4 text-base font-semibold">
